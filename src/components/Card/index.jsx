@@ -13,7 +13,7 @@ function Card({ imagen, item = undefined, voting, isWinner = false, isExistWinne
     }
 
     const stylesCard = useSpring({
-        transform: show ? "scale(1.03)" : isWinner ? "scale(0.8)" : "scale(1)",
+        transform: show ? "scale(1.1)" : isWinner ? "scale(0.8)" : "scale(1)",
         boxShadow: show
             ? "0 20px 25px rgb(0 0 0 / 25%)"
             : "0 2px 10px rgb(0 0 0 / 8%)"

@@ -31,13 +31,13 @@ const  Carousels = (props)=> {
         {
             key: 4,
             content: (
-                <Card imagen={images.interrogacion} {...props} item={listCandidate[2]} isExistWinner={isExistWinner}/>
+                <Card imagen={images.interrogacion} {...props} item={listCandidate[3]} isExistWinner={isExistWinner}/>
             )
         },
         {
             key: 5,
             content: (
-                <Card imagen={images.interrogacion} {...props} item={listCandidate[2]} isExistWinner={isExistWinner}/>
+                <Card imagen={images.interrogacion} {...props} item={listCandidate[4]} isExistWinner={isExistWinner}/>
             )
         },
     ].map((element, index) => {

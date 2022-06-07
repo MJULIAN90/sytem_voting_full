@@ -10,7 +10,9 @@ const Button = ({ title, action, height, width, sizeText, colorButton=undefined,
                 width: width, 
                 fontSize:sizeText, 
                 borderRadius:5, 
-                background: colorButton }}
+                background: colorButton,
+                fontWeight:"bold" 
+            }}
             disabled={isDisable}
         > {title}</button>
     )

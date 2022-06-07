@@ -11,7 +11,6 @@ const useVotaciones = () => {
     const contract = new ethers.Contract(addressContract, Votaciones.abi, signer);
     const decodingObject = new ethers.utils.AbiCoder();
 
-
     const [winner, setWinner] = useState('');
     const [quantityVotes, setquantityVotes] = useState(null);
     const [isAdmin, setIsAdmin] = useState(false);

@@ -132,22 +132,23 @@ contract Votaciones{
 
         //La variable ganador contendra el nombre del candidato ganador
         string memory ganador = idCandidato [candidatos[0]].nombre;
-        bool flag;
+        string memory nuevoGanador = '';
+        string memory antiguoGanador = '';
         statusVotaciones = false;
 
         //Recorremos el array de candidatos para determinar el candidato con un numero de votos mayor
         for (uint i=1; i<candidatos.length; i++){
-            if(votosCandidatos[ganador] < votosCandidatos[idCandidato [candidatos[i]].nombre]){
-                ganador = idCandidato [ candidatos[i]].nombre;
-            }else{
-                if(votosCandidatos[ganador] == votosCandidatos[idCandidato [candidatos[i]].nombre]){
-                    flag=true;
-                }
+            if(votosCandidatos[ganador] <= votosCandidatos[idCandidato [candidatos[i]].nombre]){
+                antiguoGanador = ganador;
+                nuevoGanador = idCandidato [ candidatos[i]].nombre;
+                ganador = nuevoGanador;
             }
-            
         }
-        if (flag == true) {
-            ganador = "Hay empate entre los candidatos";
+
+        if ( bytes(nuevoGanador).length  >  0){
+            if(votosCandidatos[nuevoGanador] == votosCandidatos[antiguoGanador]){
+                ganador = "Hay empate entre los candidatos";
+            }
         }
 
         winnerCandidate = ganador;
