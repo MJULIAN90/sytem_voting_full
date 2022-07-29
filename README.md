@@ -1,4 +1,4 @@
-# sytem_voting_full
+# SYSTEM VOTING
 A voting system is implemented on blockchain using solidity as technology for the development of smart contracts, react and ethers for the graphical interface and MetaMask as a provider for the communication of the JSON-RPC protocol. 
 
 In order to sign the operations (transactions) it is necessary to have the wallet linked to our provider.
